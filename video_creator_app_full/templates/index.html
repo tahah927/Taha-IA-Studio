@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generador de Video IA</title>
+</head>
+<body>
+    <h1>Generador de Video con IA</h1>
+    <form method="post">
+        <input type="text" name="topic" placeholder="Tema del video" required>
+        <button type="submit">Generar</button>
+    </form>
+    {% if script %}
+        <h2>Guión Generado:</h2>
+        <p>{{ script }}</p>
+    {% endif %}
+    {% if image_url %}
+        <h2>Imagen Generada:</h2>
+        <img src="{{ image_url }}" alt="Imagen AI" width="400">
+    {% endif %}
+</body>
+</html>
